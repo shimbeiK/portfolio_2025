@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimbei</title>
+    <!-- 追加したやつ -->
+    <link rel="stylesheet" href="style_sub.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">  
+</head>
+
+<!-- 横幅最大1300px -->
+
+<body>
+    <div class="back-ground">
+        <div class="title-section">
+            <h1>回転寿司店のDX化</h1>
+            <h4>制作期間：2023/04～2023/10，制作人数：５人</h4>
+            <a href="https://github.com/shimbeiK/sushi_project">プログラムの詳細はGithubをご参照ください．</a>
+            <div class="article-image">
+                <img src="works_item/kisoken/poster.png" style="height: 60vh;"></img>　<br>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>プロダクトの概要</h2>
+            <div class="article-text">
+                学校の授業で「風評被害に遭った回転寿司店のDX化を図ろう」というテーマのもと、５人チームで取り組みました。
+                制作物の中で、私が担当したのは「WEB注文システムの構築」、「それに基づいた既製品のロボット制御」、
+                「自作した機械の制御」および「チームリーダー」です。
+                <ul>
+                  <li>WEB注文システム：スマートフォンで注文し、Pythonで注文データを処理するようにしました。
+                  <li>ロボット制御：Dobotという既製品のロボットハンドの位置制御を行いました。
+                  <li>自作した機械の制御：Dobotの動きに同期して、メンバーが制作したハンドをBlueTooth通信で制御しました。
+                </ul>
+    
+            </div>    
+            <div class="article-image">
+                <img src="works_item/kisoken/システム構成.png" style="width: 60%;"></img><br>
+                図 システム構成図
+            </div>
+            <h2>動作の様子</h2>
+            <div class="article-image">
+                <video controls loop src="works_item/kisoken/desc.mp4" style="width: 80%;"></video>	
+            </div>
+
+        </div>
+
+        <div class="thought-section">
+            <h2>得られた経験・学び</h2>
+            <div class="article-text">
+                -リーダー経験を通じて-<br>
+                リーダーをしていたからか、チームでモノづくりをするのがとても難しいと感じました。
+                 アイデア出しから進捗の共有やタスクの分散など、一人でやっていたら経験しなかった問題がたくさんあり大変でした。
+                  しかし、機械が出来て進捗が出た時などはみんなと喜びを共有できるのがとてもやりがいがありました。 
+                  また、出来ることが増えるので上手くできればとても効率よくモノづくりをすすめられると感じました。
+                   お互いに進捗を出さないと迷惑をかけたり、メンバーが頑張っているからやる気が出たり、
+                   プラスに働く要素がとても多かったです。<br><br>
+
+                -注文システムを作成して-<br>
+                これを機にWEB制作を始めたので、無料のレンタルサーバーを契約して、データベースを作って保存して、 
+                クエリに苦戦して、PHPに挑戦して、WEBページ制作を１から始めてと、とてもやることが多かったです。
+                 最初はPythonで直接レンタルサーバーのおかげで使えたデーターベースからデータを取り出そうとしていましたが、
+                 無料のサーバーなので出来なかったのでだいぶ困りました。 結局いろんな人に聞いたりネットで調べたりした結果、
+                 PHPでデータをWEB上においてからPythonでそのページにアクセスするという方法にしました。 
+                 今思うと、データの脆弱性など問題がある方法をとってしまったと反省しています。
+                 やはり有料のモノを使う方が便利な点が多いと感じました。
+            </div>    
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,334 @@
+/* https://hossyan.github.io/portfolio */
+  .img-frame {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 40px; /* 角を丸くする */
+  }
+
+  .img-entire{
+    max-width: 90vw; /* 2枚分の幅を確保 */
+    max-height: 90vh;
+    margin: auto; /* 左右のマージンを自動調整して中央配置 */
+  }
+
+  .img-entire img{
+    height: 100%;
+    width: 100%;
+    margin: auto; /* 左右のマージンを自動調整して中央配置 */
+  }
+
+  .img-wrapper {
+    display: flex;
+    width: 300%; /* 2枚分の幅を確保 */
+    height: 100%;
+    animation: slide-horizontal 16s infinite; /* 2枚のスライドアニメーション */
+}
+
+  .img-wrapper img {
+      flex: 0 0 33%; /* 各画像がフレーム全体を埋める */
+      height: 100%;
+      width: 100%;
+      object-fit: cover; /* 画像の比率を保ちながら枠に収める */
+      border-radius: inherit; /* 親要素の丸みを継承 */
+  }
+
+  /* 横スライドアニメーションの定義 */
+  @keyframes slide-horizontal {
+    0% { transform: translateX(0); }          /* 最初の画像が表示 */
+    45% { transform: translateX(0); }    /* 2番目の画像が表示 */
+    50% { transform: translateX(-33%); }          /* 最初の画像が表示 */
+    95% { transform: translateX(-33%); }    /* 2番目の画像が表示 */
+    100% { transform: translateX(-66%); }          /* 最初の画像が表示 */
+  /* 100% { transform: translateX(0); }       1番目の画像に戻る */
+  }
+
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 30px;
+  }
+/*--------------------------------
+アバウトセクション
+---------------------------------*/
+.inner {
+  float: center;
+  background-color: var(--section-back);
+  padding: 1%;
+  margin-top: -2vh;
+}
+.contact-section .inner {
+  float: center;
+  background-color: var(--fullback);
+  padding: 1%;
+  margin-top: -2vh;
+}
+/* .qualification-section .inner {
+  float: center;
+  background-color: var(--fullback);
+  padding: 1%;
+  margin-top: -2vh;
+} */
+
+/* コンテナ全体のスタイリング */
+.content-wrapper {
+  display: flex; /* 横並びに配置 */
+  align-items: center; /* 縦方向の中央揃え */
+  text-align: center;
+}
+
+.sec-grid{
+  display: flex; /* フレックスボックスを有効化 */
+  justify-content: center; /* 水平方向に中央揃え */
+  text-align: center; /* テキストを中央揃え */}
+
+.qualification-table {
+border: double 12px var(--fullback);  
+padding: 2%;
+background-color: var(--insertcolor);
+color: var(--main-text);
+}
+
+/* 表のスタイリング */
+.qualification-table table {
+  border-collapse: collapse;
+  border: 1px solid var(--main-text);
+  width: auto;
+}
+
+.qualification-table th, .qualification-table td {
+  border: 1px solid var(--main-text);
+  padding: 10px;
+  text-align: left;
+}
+
+/* 画像のスタイリング */
+.pull-image {
+  max-width: 150px; /* 必要に応じて画像サイズを調整 */
+  height: auto;
+  margin-left: -5%;
+  margin-top: 3%;
+}
+
+/*--------------------------------
+キャリアセクション
+---------------------------------*/
+/* シンプルに、文字大き目で。 */
+
+
+/*--------------------------------
+スキルセクション
+---------------------------------*/
+/* 全体のレイアウト */
+.skill-frame {
+  width: 100vw;
+  height: 60vh;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 40px; /* 角を丸くする */
+}
+
+.skill-wrapper-front {
+  display: flex;
+  width: 300%; /* 枚数÷分割数×１００％ */
+  height: 100%;
+}
+.skill-box-front{
+  background-color: var(--fullback);
+  text-align: center;
+  border-radius: 40px; /* 角を丸くする */
+  margin-right:1%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+.skill-box-front img {
+  flex: 0 0 33%; /* １００ ÷（枚数×分割数） */
+  height: 60%; /* 親要素に対する画像の大きさ */
+  width: 20vw; 
+  object-fit: contain; /* 画像の比率を保ちながら枠に収める */
+  border-radius: inherit; /* 親要素の丸みを継承 */
+  transition:1s all;
+}
+.skill-box-front img:hover {
+  transform:scale(1.2,1.2);
+  transition:0.7s all;
+}
+
+
+.skill-title{
+  text-align: center;
+  font-size: 130%;
+  font-weight: bold;
+}
+.skill-detail{
+  display: inline; /*背景色が文字部分だけに適用される  */
+  text-align: center;
+  font-size: 70%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: var(--section-back);
+  border-radius: 10px; /* 親要素の丸みを継承 */
+  border: solid 1px var(--main-text);
+}
+
+/*--------------------------------
+資格セクション
+---------------------------------*/
+/* 証明を載せたいね */
+
+
+/*--------------------------------
+ワークセクション
+---------------------------------*/
+.works-frame {
+  width: 100vw;
+  height: 55vh;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 40px; /* 角を丸くする */
+}
+
+.works-title{
+  text-align: center;
+  font-size: 100%;
+  font-weight: 700;
+}
+
+.works-box-front{
+  background-color: var(--fullback);
+  text-align: center;
+  border-radius: 40px; /* 角を丸くする */
+  margin-right:1%;
+  /* padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px; */
+  margin-left: 10px;
+  overflow: hidden;
+}
+.works-box-front img {
+  flex: 0 0 33%; /* １００ ÷（枚数×分割数） */
+  height: 60%; /* 親要素に対する画像の大きさ */
+  width: 20vw; 
+  object-fit: contain; /* 画像の比率を保ちながら枠に収める */
+  transition:1s all;
+}
+
+.works-box-front img:hover {
+  transform:scale(1.2,1.2);
+  transition:0.7s all;
+}
+
+/* 横スクロールのためのコンテナ */
+.scroll-container {
+  overflow-x: auto; /* 横方向にスクロール可能に */
+}
+
+
+
+/*--------------------------------
+コンタクトセクション
+---------------------------------*/
+.contact-list {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contact-item {
+  width: 100px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.contact-name {
+  font-size: 30px;
+  display: block;
+  margin-top: 5px;
+  color: var(--main-text);
+}
+
+.contact-name:hover{
+  color: var(--main-text);
+}
+.contact-image {
+  width: 90px;
+  background-color: #fff;
+}
+
+.contact-image:hover {
+  animation:1.5s linear infinite rotation;
+}
+
+/*-- 回転 --*/
+@keyframes rotation{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg); }
+}
+
+.contact-text {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.accordion {
+  margin-bottom: 7px;
+  border: 2px solid var(--main-text);
+  border-radius: 5px;
+  background-color: var(--fullback);
+}
+
+.accordion summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.accordion:hover{
+  background-color: var(--insertcolor);
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::after {
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid #333333b3;
+  border-right: 3px solid #333333b3;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.accordion p {
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: .3em 2em 1.5em;
+  color: #333333;
+  transition: transform .5s, opacity .5s;
+}
+
+.accordion[open] p {
+  transform: none;
+  opacity: 1;
+}
