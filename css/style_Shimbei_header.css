@@ -19,7 +19,7 @@ body{
   letter-spacing: .8px;
   color: var(--main-text);
   /* background-color: var(--fullback); */
-  background-image: url(../items/works/portfolio/背景ロゴ100.png);
+  background-image: url(../item/works/portfolio/背景ロゴ100.png);
   background-color:rgba(255,255,255,0.9);
   background-blend-mode:lighten;
   margin: auto;
