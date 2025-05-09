@@ -1,0 +1,280 @@
+/*--------------------------------
+全体の設定
+---------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+:root {
+  --fullback: #ffffff;
+  --section-back: #eeeeee;
+  --main-text: #000000;
+  --insertcolor: #ffeddb;
+  --accentcolor: #d70000;
+}
+
+
+body{
+  text-align:center;
+  font-family: "Yuji Syuku", serif,"ヒラギノ角ゴ Pro W3", sans-serif;
+  font-size: 25px;
+  line-height: 1.8;
+  letter-spacing: .8px;
+  color: var(--main-text);
+  /* background-color: var(--fullback); */
+  background-image: url(../item/works/portfolio/背景ロゴ100.png);
+  background-color:rgba(255,255,255,0.9);
+  background-blend-mode:lighten;
+  margin: auto;
+  padding: 0;
+  /* max-width: 93vw; */
+  overflow-x: hidden;
+}
+
+.icon .icon-image{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  top: 5px;
+  left: 20px;
+}
+
+.icon img{
+  max-width: 10vw;
+  object-fit: contain; /* 画像の比率を保ちながら枠に収める */
+
+}
+
+ .heading-primary {
+  float: left;
+  text-align: left;
+  font-size: 45px;
+  display: inline; /*背景色が文字部分だけに適用される  */
+  font-family: 'MS Pゴシック', Courier, monospace;
+  padding-left: 2%;
+  padding-right: 2%;
+  color: var(--main-text);
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-left: 1vw;
+  font-weight: strong;
+  background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;
+}
+
+th ,td{
+  white-space: nowrap;
+}
+
+li{
+  text-align: left;
+}
+
+ul{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+a{
+  color: var(--main-text);
+}
+
+table {
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+summary{
+  color: var(--main-text);
+}
+
+details{
+height: auto;
+}
+
+/* .sec-grid{
+  flex-wrap: wrap;
+  border: double 12px var(--fullback);  
+  padding: 2%;
+  background-color: var(--insertcolor);
+  color: var(--main-text);
+} */
+
+/* .grid-inner{
+  display: flex;
+  flex: 0 0 46%;
+  justify-content: space-between;
+} */
+
+.section-body .works{
+  border: solid 2px;  
+  padding: 2%;
+}
+
+.section-lead{
+  color: var(--main-text);
+}
+
+.section-lead .works-url-link{
+  color: var(--accentcolor);
+}
+
+.section-lead .works-url-link:hover{
+  color: var(--main-text);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100vw;
+  height: 80px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.526);
+  color: #000000;
+  text-align: center;
+  z-index: 5;
+}
+
+section{
+  padding-bottom: 8%;
+}
+
+/* .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 540px;
+  background: url(../img/header.png) center/cover no-repeat;
+} */
+
+iframe{
+ width:700px;
+ height:400px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.logo-name span {
+  opacity: 0;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+.logo-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 88px;
+  font-weight: normal;
+  line-height: 1;
+  display: block;
+  letter-spacing: .1em;
+  color: #fff;
+}
+
+.logo-title span {
+  opacity: 0;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+.menu-line{
+  position: fixed;
+  right: 120px;
+  top: 30px;
+  font-size: 15px;
+}
+
+.hamburger {
+  width: 8vw;
+  height: 60px;
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  float: right;
+}
+
+.out-refer:hover {
+  color: var(--accentcolor);
+}
+
+.hamburger span {
+  position: absolute;
+  width: 5.1vh;
+  height: 0.7vh;
+  background-color: var(--main-text);
+  transition: .7s;
+}
+
+.hamburger span:first-of-type {
+  top: 20%;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 50%;
+}
+
+.hamburger span:last-of-type {
+  top: 80%;
+}
+
+.hamburger.active span:first-of-type {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:last-of-type {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.slide-menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 65px;
+  width: 100%;
+  left: 0;
+  transform: translateX(100%);
+  transition: .5s;
+  color: #fff;
+}
+
+.slide-menu li {
+  color: var(--main-text);
+  line-height: 400%;
+  text-align: center;
+  max-width: 90vw;
+  list-style: none;
+}
+
+.slide-menu.active {
+  transform: translateX(0);
+}
+
+.out-refer{
+  color:var(--main-text);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    background-size: 46%;
+    font-size: 20px;
+
+  }
+  .heading-primary {
+    font-size: 35px;
+  }
+}
